@@ -10,4 +10,6 @@ Together rides (一起約騎) and private rides (私人約騎) share one creatio
 
 Legacy activities remain available. Hosts can explicitly enable registration; source mapping prevents duplicate conversions and freezes old write paths without deleting records or automatically making private activities public. Existing group IDs and invitations are preserved.
 
-Application source: `a4f34055bc1410b909d10e969fc4714111f731a6`.
+Hosts can click the registered count on a ride card or activity details to view the host, confirmed participants and ordered waitlist, with refresh and retry controls. Full rosters remain host-only.
+
+Application source: `190b95fb65c067772443deb496793b546a7d5069`.
