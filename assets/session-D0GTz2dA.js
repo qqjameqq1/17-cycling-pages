@@ -1,1 +1,0 @@
-import{C as e,S as t,_ as n,b as r,c as i,g as a,h as o,p as s,v as c}from"./index.esm-3PUJ6NMe.js";e(`firebase`,`12.19.0`,`app`);function l(e){s(`silent`);let l=t(e),u=c(l,{persistence:n,popupRedirectResolver:a});return{auth:u,db:i(l),login:()=>{let e=new o;return e.setCustomParameters({prompt:`select_account`}),r(u,e)}}}export{l as createSparkSession};
