@@ -1,18 +1,24 @@
 {
   "schema_version": 1,
-  "source_commit": "551b85b079124cf3f567f15e41c33faeaadcff56",
-  "built_at": "2026-10-06T09:03:30+00:00",
-  "storage": "browser-local",
+  "source_commit": "0203e311c6097572799e50bd5f7e7ffced5c7737",
+  "built_at": "2026-10-07T03:25:27.618Z",
+  "development_build": false,
+  "storage": "firebase-spark-and-browser-local",
   "base_path": "/17-cycling-pages/",
+  "firebase_project": "cycling-f7d97",
+  "firestore_rules_sha256": "3c00b32209ee7c3fd6bd6a389fb5eb51f7b26b6e9e42bb3aec74ba7bb1dd9814",
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "README.md": "9a6b357a97bed6cf410d15a6c2b421b0605126788702a37091dfab2b10e6cb3d",
-    "assets/index-CNb2oij3.css": "6900f833e66575833fb579341fc29f805397cccd3ce0ae042909299028874571",
-    "assets/index-RLXan-kJ.js": "946b46b0789043744a300ec7223161487eba6404617c3e61212a15dc80a5d6b5",
+    "assets/app-CNs8Zaea.css": "f750e31b16481111bcb89f1cd08c1a4bfde46433c1acac67035a5375fbd8c205",
+    "assets/app-D7882H50.js": "e059e280d37c9fda8610f571783c1079f03541ebaf88fa0c5b1526fb95a20c87",
+    "assets/index-B4x6K9p5.css": "7d3b3ec86c2394e16b4fc6d06c0d2bd1a591fe79c87e272b911903a565eeed29",
+    "assets/index-lfuvNyUg.js": "5b35125cb8768b7f56d6f1134a3eda5a082c2b077413231fc1546760d7296444",
+    "assets/index.esm-4ZkLaROk.js": "f5efac1c90e9982d358bd2a1ac19bb2874ba5837676cd4949d7e0418eadf8d96",
+    "assets/session-B60nlra8.js": "7e0e79cd8e9bc6d8abffcc45b24086ea4ac513244444a253cd0c5eb617c7fbda",
     "favicon.svg": "a27f7aebc816c8d88292f8cf1be45743d358f68856fdf86524805ef7b74c1e61",
     "file.svg": "1e0ae4d1a1ddfa36752988647b731e4abf150c414d069ec83c96fb0aaeff0307",
     "globe.svg": "d051a8c47936990a9085693d307bb7cea1bc1b6d7ed956bcbaacf674f4ec96b9",
-    "index.html": "6da4d21a283a3f32723e60ee8a3483077ec697722ffc8cd3c65276c6653751d1",
+    "index.html": "c2a1e944c3e09415bda46e2530d3a5fc93c44ebe9e0bd2c0c1c058774aed24a6",
     "window.svg": "decf1cf7bb22b5c99c4857cfcd5718ce5465c4454166317589c83fc73df74b66"
   }
 }
