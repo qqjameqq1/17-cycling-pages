@@ -18,4 +18,6 @@ Members can switch between all rides, their upcoming registrations (including wa
 
 Imported GPX routes can be viewed over surrounding MapTiler streets with Leaflet after explicitly opening the map. GPX files are not sent to the map provider. Failed tiles retain the local track preview; this is not navigation. Existing Google sign-in and private member storage remain in place.
 
-Application source: `818f3e5113a55d2b24ba2156477255f71478535a`.
+Application source: `6bcfa6b524eaae801df4959e097952de9de685dd`.
+
+Hosts can soft-delete rides with no past registrations, or cancel then archive rides that have participants. Completed rides can be archived. Activity history retains minimal name/time/status summaries for former participants without sharing meeting details or other identities. Deletion and archival are not reversible in this version. Refresh existing tabs after this update.
