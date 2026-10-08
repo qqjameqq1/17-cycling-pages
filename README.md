@@ -12,4 +12,8 @@ Legacy activities remain available. Hosts can explicitly enable registration; so
 
 Hosts can click the registered count on a ride card or activity details to view the host, confirmed participants and ordered waitlist, with refresh and retry controls. Full rosters remain host-only.
 
-Application source: `190b95fb65c067772443deb496793b546a7d5069`.
+Members can switch between all rides, their upcoming registrations (including waitlist positions) and hosted rides. My account and successful signup provide a shortcut; the next-ride reminder includes confirmed participation or hosted rides. Past and withdrawn registrations are excluded.
+
+[Product Roadmap](https://qqjameqq1.github.io/17-cycling-pages/roadmap.html) is public, mobile friendly and readable without JavaScript. The website footer links to it. Planned features have no promised release dates.
+
+Application source: `bef583fba312b79653667f3e638fab385d201160`.

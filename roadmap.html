@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="17 單車趣的產品進度與下一步：我的報名、活動歷程、行程提醒，以及更順暢的約騎體驗。">
+  <meta name="theme-color" content="#173f31">
+  <title>產品 Roadmap · 17 單車趣</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <style>
+    :root { color-scheme: light; --forest: #173f31; --lime: #c6ef81; --ground: #f4f7f0; --paper: #fff; --muted: #526650; --line: #d8e2d0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ground); color: var(--forest); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif; line-height: 1.8; }
+    a { color: inherit; text-underline-offset: 5px; }
+    a:focus-visible { outline: 3px solid var(--forest); outline-offset: 5px; border-radius: 4px; }
+    .skip { position: absolute; top: -100px; left: 20px; padding: 10px 18px; background: var(--paper); z-index: 2; }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1080px, calc(100% - 64px)); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--line); }
+    .topbar { min-height: 100px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-size: 20px; font-weight: 750; }
+    .brand b { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; color: var(--lime); background: var(--forest); font-size: 25px; font-style: italic; }
+    .home { font-size: 14px; font-weight: 600; padding-block: 12px; }
+    .intro { padding: 64px 0 42px; max-width: 720px; }
+    .eyebrow { margin: 0 0 12px; font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+    h1 { font-size: clamp(34px, 5.5vw, 54px); line-height: 1.35; letter-spacing: -1px; margin: 0 0 20px; }
+    h2, h3 { line-height: 1.5; }
+    .intro > p:not(.eyebrow) { color: var(--muted); margin: 0; font-size: 17px; max-width: 620px; }
+    .meta { display: flex; gap: 10px 28px; flex-wrap: wrap; margin-top: 25px; color: var(--muted); font-size: 13px; }
+    time { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 25px; margin: 12px 0 26px; }
+    .section-head h2 { margin: 0; font-size: 23px; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 14px; }
+    .stages { padding: 0 0 0 58px; margin: 0; list-style: none; }
+    .stage { position: relative; padding: 0 0 26px 0; }
+    .stage::before { content: ""; position: absolute; left: -39px; top: 39px; bottom: -1px; border-left: 2px solid var(--line); }
+    .stage:last-child::before { display: none; }
+    .stop { position: absolute; left: -58px; top: 0; display: grid; place-items: center; width: 40px; height: 40px; border: 2px solid var(--line); border-radius: 50%; background: var(--ground); font-family: ui-monospace, monospace; font-size: 14px; font-weight: 700; }
+    .released .stop { background: var(--forest); border-color: var(--forest); color: var(--lime); }
+    .panel { background: var(--paper); padding: 26px 32px 28px; border: 1px solid var(--line); border-radius: 18px; }
+    .released .panel { border-color: var(--forest); background: var(--forest); color: var(--paper); }
+    .stage-top { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .badge { display: inline-block; padding: 3px 12px; border: 1px solid var(--line); border-radius: 20px; font-size: 12px; font-weight: 700; line-height: 1.7; }
+    .released .badge { color: var(--forest); background: var(--lime); border-color: var(--lime); }
+    .stage-top span:last-child:not(.badge) { font-size: 13px; }
+    .panel h3 { font-size: 25px; margin: 15px 0 9px; }
+    .panel > p { margin: 0; color: var(--muted); }
+    .released .panel > p { color: #d8e2d0; }
+    .features { margin: 18px 0 0; padding-left: 20px; }
+    .features li { padding-left: 4px; margin-top: 6px; }
+    .detail { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    .released .detail { color: #d8e2d0; border-color: #526650; }
+    .directions { margin-top: 42px; }
+    .direction-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .direction { padding-top: 20px; border-top: 2px solid var(--line); }
+    .direction h3 { font-size: 18px; margin: 0 0 10px; }
+    .direction p { margin: 0; font-size: 14px; color: var(--muted); }
+    .outlook { margin: 42px 0 64px; padding: 22px 26px; border: 1px dashed var(--line); border-radius: 14px; }
+    .outlook h3 { font-size: 16px; margin: 0 0 8px; }
+    .outlook p { font-size: 14px; margin: 0; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 26px 0 34px; }
+    .bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; font-size: 13px; color: var(--muted); }
+    .bottom p { margin: 0; }
+    @media (max-width: 680px) {
+      .wrap { width: calc(100% - 36px); }
+      .topbar { min-height: 82px; gap: 12px; }
+      .brand { font-size: 18px; gap: 8px; }
+      .brand b { width: 36px; height: 36px; border-radius: 10px; font-size: 23px; }
+      .home { font-size: 13px; }
+      .intro { padding: 38px 0 30px; }
+      .intro > p:not(.eyebrow) { font-size: 15px; }
+      .section-head { margin-top: 6px; }
+      .section-head h2 { font-size: 21px; }
+      .stages { padding-left: 36px; }
+      .stop { left: -36px; width: 26px; height: 26px; font-size: 11px; }
+      .stage::before { left: -24px; top: 25px; }
+      .panel { padding: 20px; border-radius: 14px; }
+      .panel h3 { font-size: 22px; }
+      .panel > p, .features { font-size: 14px; }
+      .direction-grid { grid-template-columns: 1fr; gap: 22px; }
+      .outlook { padding: 20px; margin-bottom: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header>
+    <nav class="wrap topbar" aria-label="網站導覽">
+      <a class="brand" href="./" aria-label="17 單車趣首頁"><b aria-hidden="true">17</b> 單車趣</a>
+      <a class="home" href="./">返回網站 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main class="wrap" id="main">
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">17 單車趣 · 產品進度</p>
+      <h1 id="title">產品 Roadmap</h1>
+      <p>從找到一場想參加的約騎，到出發、收到異動、留下回憶。我們會沿著這段騎乘旅程，逐步補齊你需要的功能。</p>
+      <div class="meta"><span>更新於 <time datetime="2026-10-08">2026.10.08</time></span><span>依使用回饋調整順序，尚未排定後續上線日期</span></div>
+    </section>
+    <section aria-labelledby="journey">
+      <div class="section-head"><h2 id="journey">先把每一次約騎照顧好</h2><p>一起約騎、私人約騎，共用同一套報名體驗。</p></div>
+      <ol class="stages">
+        <li class="stage released">
+          <span class="stop" aria-hidden="true">01</span>
+          <article class="panel" aria-labelledby="registrations">
+            <div class="stage-top"><span class="badge">已推出</span><span>本次更新</span></div>
+            <h3 id="registrations">找回我的報名</h3>
+            <p>報名後，隨時知道自己接下來要騎哪一場。</p>
+            <ul class="features">
+              <li>一起騎可切換「全部活動／我的報名／我發起的」。</li>
+              <li>公開與私人約騎集中顯示，依集合時間排序，標示正取或候補順位。</li>
+              <li>從「我的」或報名成功後，直接前往「我的報名」。</li>
+              <li>首頁下一場提醒，顯示你已確認參加或自己主辦的約騎。</li>
+            </ul>
+            <div class="detail">目前顯示尚未出發的有效報名與候補；已退出、已結束的活動不列入。重新整理可取得最新狀態。</div>
+          </article>
+        </li>
+        <li class="stage">
+          <span class="stop" aria-hidden="true">02</span>
+          <article class="panel" aria-labelledby="history">
+            <div class="stage-top"><span class="badge">規劃中</span></div>
+            <h3 id="history">留下完整活動歷程</h3>
+            <p>讓已出發、已完成或已取消的活動，也有自己的位置。</p>
+            <ul class="features"><li>回顧自己參加過的活動摘要。</li><li>看懂取消、退出或狀態變更的原因。</li></ul>
+            <div class="detail">先確認紀錄保留與刪除方式；保護私人約騎的集合資訊與參加者隱私。</div>
+          </article>
+        </li>
+        <li class="stage">
+          <span class="stop" aria-hidden="true">03</span>
+          <article class="panel" aria-labelledby="reminders">
+            <div class="stage-top"><span class="badge">規劃中</span></div>
+            <h3 id="reminders">不漏接異動與出發提醒</h3>
+            <p>候補遞補、行程變更或活動取消，都能找到對應的活動。</p>
+            <ul class="features"><li>先集中站內未讀消息，讓重要異動更容易找到。</li><li>再評估行事曆、出發提醒與可自行選擇的通知方式。</li></ul>
+            <div class="detail">目前站內異動需重新整理；Email、外部推播與自動出發提醒尚未推出。</div>
+          </article>
+        </li>
+        <li class="stage">
+          <span class="stop" aria-hidden="true">04</span>
+          <article class="panel" aria-labelledby="reliability">
+            <div class="stage-top"><span class="badge">規劃中</span></div>
+            <h3 id="reliability">讓更多人約騎也順暢</h3>
+            <p>活動與報名變多時，一樣能快速找到自己的行程。</p>
+            <ul class="features"><li>改善列表讀取速度與大量活動的查找。</li><li>持續驗證多人同時報名、錯誤重試與更新穩定性。</li></ul>
+            <div class="detail">依實際使用量與回饋，安排效能改善和發布驗證。</div>
+          </article>
+        </li>
+      </ol>
+    </section>
+    <section class="directions" aria-labelledby="directions">
+      <div class="section-head"><h2 id="directions">其他持續關注的方向</h2><p>待安排，尚未承諾推出時間。</p></div>
+      <div class="direction-grid">
+        <article class="direction"><h3>GPS 與騎乘草稿</h3><p>驗證手機實際騎乘、處理中斷後恢復，清楚標示背景定位的限制。</p></article>
+        <article class="direction"><h3>紀錄備份與管理</h3><p>安全匯出與還原，讓資料衝突、刪除與恢復都有清楚的選擇。</p></article>
+        <article class="direction"><h3>帳號、同步與隱私</h3><p>持續驗證跨裝置使用、帳號隔離與登出，依試用回饋改善資料管理。</p></article>
+      </div>
+    </section>
+    <aside class="outlook" aria-labelledby="future">
+      <h3 id="future">再往前一點 · 長期評估</h3>
+      <p>地圖與路線規劃將先釐清使用需求；原生 iPhone、Apple Watch 與 HealthKit 留在長期方向，目前尚未排入實作。</p>
+    </aside>
+  </main>
+  <footer><div class="wrap bottom"><p>17 單車趣 · 一起，把生活騎得更有趣。</p><a href="./">回到網站，看看下一場約騎</a></div></footer>
+</body>
+</html>
