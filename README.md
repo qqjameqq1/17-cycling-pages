@@ -16,4 +16,6 @@ Members can switch between all rides, their upcoming registrations (including wa
 
 [Product Roadmap](https://qqjameqq1.github.io/17-cycling-pages/roadmap.html) is public, mobile friendly and readable without JavaScript. The website footer links to it. Planned features have no promised release dates.
 
-Application source: `bef583fba312b79653667f3e638fab385d201160`.
+Imported GPX routes can be viewed over surrounding MapTiler streets with Leaflet after explicitly opening the map. GPX files are not sent to the map provider. Failed tiles retain the local track preview; this is not navigation. Existing Google sign-in and private member storage remain in place.
+
+Application source: `818f3e5113a55d2b24ba2156477255f71478535a`.
